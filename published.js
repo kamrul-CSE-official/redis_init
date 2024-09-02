@@ -23,7 +23,7 @@ app.get("/publisher", async (req, res) => {
     id: id,
     message: `This response come form Publisher: ${id}`,
   };
-
+console.log("Publish data: ", data);
   await publisher.publish("message", JSON.stringify(data));
 
   res.send({
